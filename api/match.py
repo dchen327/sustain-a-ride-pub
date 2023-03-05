@@ -49,7 +49,6 @@ class handler(BaseHTTPRequestHandler):
             print(flat)
             if "street_number" in flat:
                 return res['formatted_address']
-            print("IM GAY")
             print(res)
         assert False
     
@@ -129,6 +128,4 @@ if __name__ == '__main__':
     html = '''<iframe width="1200" height="900" frameborder="0" style="border:0" 
 src="{0}" allowfullscreen></iframe>'''.format(out["iframe"])
     print(html)
-    with open("gay.html", "w") as f:
-        f.write(html)
     # ('250+North+College+Park+Dr,Upland,CA+91786', '1999+Avenue+of+the+Stars,Los+Angeles,CA+90067', ['2392+Yasamin+Pl,Upland,CA+91786,USA', '2392+Yasamin+Pl,Upland,CA+91786,USA', '250+College+Park+Dr,Upland,CA+91786,USA', '1999+Avenue+of+the+Stars,Los+Angeles,CA+90067,USA', '9303+Wilshire+Blvd,Los+Angeles,CA+90024,USA', '2271+Prosser+Ave,Los+Angeles,CA+90064,USA'], 4598, 69.4)
